@@ -1,0 +1,15 @@
+<h1>Create new Post</h1>
+<%= form_with model: @post do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+    <%= form.hidden_field :user_id, value: @user.id %>
+  </div>
+  <div>
+    <%= form.submit "Save" %>
+  </div>
+<%end%>

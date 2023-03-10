@@ -1,0 +1,7 @@
+<h1>All Posts</h1>
+<% @posts.each do |post| %>
+  <%=link_to post do%>
+    <p><%= post.title %> <br>
+      : <%= post.user.name %></p>
+  <%end%>
+<%end%>

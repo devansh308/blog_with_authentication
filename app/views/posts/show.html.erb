@@ -1,0 +1,9 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+<br>
+By - <%= @post.user.name %>
+<br>
+<br>
+<% if @user%>
+  <%= link_to "Edit post", edit_post_path(@post.id) %>
+<%end%>
